@@ -78,7 +78,7 @@ extension CAPSPageMenu {
         controllerScrollView.alwaysBounceHorizontal = configuration.enableHorizontalBounce
         controllerScrollView.bounces = configuration.enableHorizontalBounce
         
-        controllerScrollView.frame = CGRect(x: 0.0, y: configuration.menuHeight, width: self.view.frame.width, height: self.view.frame.height)
+        controllerScrollView.frame = CGRect(x: 0.0, y: configuration.menuHeight, width: self.view.frame.width, height: self.view.frame.height - configuration.menuHeight)
         
         self.view.addSubview(controllerScrollView)
         
@@ -164,9 +164,9 @@ extension CAPSPageMenu {
         for controller in controllerArray {
             if index == 0.0 {
                 // Add first two controllers to scrollview and as child view controller
-                controller.viewWillAppear(true)
+//                controller.viewWillAppear(true)
                 addPageAtIndex(0)
-                controller.viewDidAppear(true)
+//                controller.viewDidAppear(true)
             }
             
             // Set up menu item for menu scroll view
